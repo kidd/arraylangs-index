@@ -1,0 +1,49 @@
+#+TITLE: Array Langs Index
+#+AUTHOR: Raimon Grau
+#+OPTIONS: ':nil *:t -:t ::t <:t H:3 \n:nil ^:nil arch:headline
+#+OPTIONS: author:t c:nil creator:comment d:(not "LOGBOOK") date:nil
+#+OPTIONS: e:t email:nil f:t inline:t p:nil pri:nil stat:t
+#+OPTIONS: tags:t tasks:t tex:t timestamp:t todo:t |:t
+#+EXCLUDE_TAGS: noexport
+#+KEYWORDS: bash zsh shell
+#+LANGUAGE: en
+#+SELECT_TAGS: export
+
+#+OPTIONS: html-style:nil
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+#+HTML_HEAD_EXTRA: <link rel="stylesheet" type="text/css" href="styles.css"/>
+
+#+OPTIONS: reveal_center:nil timestamp:nil
+#+REVEAL_THEME: black
+
+# toc:nil num:nil
+* APL
+Good complete books:
+- https://xpqz.github.io/learnapl/intro.html
+- https://www.dyalog.com/mastering-dyalog-apl.htm
+
+* J
+- https://zserge.com/posts/j/
+* K
+The main implementation is private, but there are some opensource ones. [[ngn/k]], kona and [[https://github.com/JohnEarnest/ok/][oK]] are the most complete
+Very minimalistic. I read somewhere it's like a superpowered calculator.  It has around 20 builtins.
+** Tutotrials
+The shape of tutorials of K looks like... Super minimalistic.
+- https://kparc.com/
+- https://xpqz.github.io/kbook/Introduction.html
+- https://github.com/JohnEarnest/ok/blob/gh-pages/docs/Manual.md
+- https://github.com/JohnEarnest/ok/blob/gh-pages/docs/Programming.md
+- http://www.nsl.com/k/k2/k295/kreflite.pdf
+- http://www.nsl.com/k/k2/k295/kusrlite.pdf
+- http://www.nsl.com/papers/style.pdf
+- Q for Mortals: https://code.kx.com/q4m3/
+- http://www.nsl.com/
+
+** AoC
+- https://github.com/qbists/studyq/tree/main/aoc/2022
+- https://k.miraheze.org/wiki/Advent_of_Code
+
+* BQN
+* Klong
+- https://t3x.org/klong/
+- https://github.com/briangu/klongpy
