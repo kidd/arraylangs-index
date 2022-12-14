@@ -17,6 +17,8 @@
 #+REVEAL_THEME: black
 
 # toc:nil num:nil
+* Generic
+- https://gist.github.com/suhr/77f8d0acae5a2399cab950841cc99a05
 * APL
 Good complete books:
 - https://xpqz.github.io/learnapl/intro.html
@@ -27,10 +29,12 @@ Good complete books:
 * K
 The main implementation is private, but there are some opensource ones. [[ngn/k]], kona and [[https://github.com/JohnEarnest/ok/][oK]] are the most complete
 Very minimalistic. I read somewhere it's like a superpowered calculator.  It has around 20 builtins.
+John Earnest taling about k versions: https://www.arraycast.com/episodes/episode41-john-earnest
 ** Tutotrials
 The shape of tutorials of K looks like... Super minimalistic.
 - https://kparc.com/
 - https://xpqz.github.io/kbook/Introduction.html
+- https://github.com/razetime/ngn-k-tutorial/
 - https://github.com/JohnEarnest/ok/blob/gh-pages/docs/Manual.md
 - https://github.com/JohnEarnest/ok/blob/gh-pages/docs/Programming.md
 - http://www.nsl.com/k/k2/k295/kreflite.pdf
@@ -38,10 +42,44 @@ The shape of tutorials of K looks like... Super minimalistic.
 - http://www.nsl.com/papers/style.pdf
 - Q for Mortals: https://code.kx.com/q4m3/
 - http://www.nsl.com/
+- http://archive.vector.org.uk/art10010830
+- https://web.archive.org/web/20070519112242/http://www.kuro5hin.org/story/2002/11/14/22741/791
+
+
 
 ** AoC
 - https://github.com/qbists/studyq/tree/main/aoc/2022
 - https://k.miraheze.org/wiki/Advent_of_Code
+
+** Snippets and wtfs
+- scan or n-dos?
+    #+begin_src k
+1+:\3 3#!9 \ this is a n-dos
+\ Why does the same as
++:\3 3#!9 \ if this is a scan, it should pick rows, not the full table
+   #+end_src
+- amend fail in ngn/k?
+  - https://k.miraheze.org/wiki/Amend
+  - https://github.com/kevinlawler/kona/wiki/Amend it works in kona.
+  -
+    #+begin_src k
+  b:2 3#!6
+  b+: b  \ Works fine (dyadic),
+  .[`b;();+:] \ works fine (monadic)
+  b+:  \ That should amend using monadic, but fails in ok and ngn. works in kona
+    #+end_src
+  - (f;g)@'lst
+#+begin_src k
+f:1+
+g:2+
+r:0 1
+(x1;x2):r
+(f x1; g x2)
+(f;g)@r  \ (+1;+2)
+(f;g)@'r  \ why?
+#+end_src
+
+
 
 * BQN
 * Klong
