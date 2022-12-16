@@ -44,6 +44,11 @@ The shape of tutorials of K looks like... Super minimalistic.
 - http://www.nsl.com/
 - http://archive.vector.org.uk/art10010830
 - https://web.archive.org/web/20070519112242/http://www.kuro5hin.org/story/2002/11/14/22741/791
+- https://nsl.com/k/training/idioms_K3.pdf
+- https://nsl.com/k/training/
+- https://web.archive.org/web/20071230205056/http://kx.com/technical/contribs/eugene/kidioms.html
+- https://gist.github.com/chrispsn/b1020918a83a28ab8b4442d8aff8d1b4 <- K mezzaine
+- https://github.com/kparc/kcc
 
 
 
