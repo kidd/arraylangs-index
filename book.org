@@ -83,8 +83,20 @@ r:0 1
 (f;g)@r  \ (+1;+2)
 (f;g)@'r  \ why?
 #+end_src
-
-
+  -  { \(x;y);x>y}':-5 5 4 8  . \ does print partial results?
+#+begin_src k
+ { \(x;y);x>y}':-5 5 4 8
+-5 0N
+5 -5
+4 5
+8 4
+1 1 0 1
+#+end_src
+  - sort by frequency desc
+#+begin_src k
+d:(!=s)!(#'.=s)
+&(>d)!(d[>d])
+#+end_src
 
 * BQN
 * Klong
