@@ -28,7 +28,7 @@ Good complete books:
 * J
 - https://zserge.com/posts/j/
 * K
-The main implementation is private, but there are some opensource ones. [[ngn/k]], kona and [[https://github.com/JohnEarnest/ok/][oK]] are the most complete
+The main implementation is private, but there are some opensource ones. ngn/k, kona and [[https://github.com/JohnEarnest/ok/][oK]] are the most complete
 Very minimalistic. I read somewhere it's like a superpowered calculator.  It has around 20 builtins.
 John Earnest taling about k versions: https://www.arraycast.com/episodes/episode41-john-earnest
 ** Tutotrials
