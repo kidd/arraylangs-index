@@ -19,6 +19,7 @@
 # toc:nil num:nil
 * Generic
 - https://gist.github.com/suhr/77f8d0acae5a2399cab950841cc99a05
+- https://github.com/k-qy/notation
 * APL
 Good complete books:
 - https://xpqz.github.io/learnapl/intro.html
@@ -40,6 +41,7 @@ The shape of tutorials of K looks like... Super minimalistic.
 - http://www.nsl.com/k/k2/k295/kreflite.pdf
 - http://www.nsl.com/k/k2/k295/kusrlite.pdf
 - http://www.nsl.com/papers/style.pdf
+- https://github.com/Dyalog/ride/blob/master/docs/coding-style.txt
 - Q for Mortals: https://code.kx.com/q4m3/
 - http://www.nsl.com/
 - http://archive.vector.org.uk/art10010830
