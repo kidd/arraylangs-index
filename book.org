@@ -52,7 +52,7 @@ The shape of tutorials of K looks like... Super minimalistic.
 - https://gist.github.com/chrispsn/b1020918a83a28ab8b4442d8aff8d1b4 <- K mezzaine
 - https://github.com/kparc/kcc
 - https://cs.nyu.edu/~shasha/papers/tutorial
-
+- https://ngn.codeberg.page/txt/tacitjk.pdf
 
 
 
@@ -123,8 +123,34 @@ d:#'=s
 &(>d)#d
 #+end_src
 
+- tacit k hook
+  #+begin_src k
+    f/1 g\
+  #+end_src
+
+- tacit k fork
+  #+begin_src k
+    g/(f;h)@\:
+  #+end_src
+
+- fractals
+  https://ngn.codeberg.page/k/#eJyFkd2OmzAQhe95ioloY4Od+AdCkVFWeYK+QBJ1CZAtKmsiIJFTSJ69k1ysqlZVfXE0c/GdOTMuuosZx+XWZVf+MzOZ2t/Elio2CeICX+6X4BZmjs1tw3YERHHuLhXkPdDS9Vl57QNYvMChbRt4z4eudt6ha8zIBTmnhCipY8mYIER+Be0LgyVWse9C6qM/9UNUQhWkmQaVZDFEOktiUDoNbiB+832O6fK6aSrvnJrxtfhEpZOykJU8ym2x54X/oBiVPInZvDCKYQ9axikkq1WU4EI7h6bn4ZhCZYu2rLyjeZUGE29AlHV/avKr5x039/VuN8cU/3uir6vuVNv+Rw2YMbdvGO64CUUoDBHa53e1nsV+9C+8yO3QdlCe+wGxoruAUqPjZCLTQoEK3U3M9N9Y2eVvrYXnVyCXjExTxym/zx7n5JMhgUBU/cmdqty2H9hqPHCivuGwg+GCTsxxmfEcBRPkBs1c8DAR3+vmUHXDB2hHOtHU18EuksFGCxYRIznSt51dz3RoTfQMLbpzU0USCfVifYZHwYsoTekUhQu5XAHKF0ZnNvhsjfaTOGAjXQgXukyHAodvAiFBvOe2rJpD1w7QV4Pn/QKIkrFl
+  #+begin_src k
+    crv:{{.[x;y,z;:;1]}/[(1+|/'x)#0]. x-:&/'x}@+\' /curve as (dxs;dys) -> bool matrix
+brl:{,/'u8''10240++/''0N 2#/:+/'0N 4#x*(#x)#(#*x)#'(1 8;2 16;4 32;64 128)} /bool matrix -> braille
+u8:{`c$(0x00c0e0f0[c],c#128)+(0,64+&c:1+128 2048 65536'x)\x} /utf8 encode
+f:`0:brl@ /display
+
+f@~=\\&64                                 /sierpinski triangle
+f@*/*/:'/2#,~1=!4#3                       /cantor dust
+f@crv 11{x,'|'|-1 1*x}/!2                 /dragon curve
+f@6{+2(x,(,~!#*x),|:')/x}/1               /peano curve
+f@5{b,'1_'|'b:,/(|+x,0;,a,0;x,'a:~!#x)}/1 /hilbert curve
+f@n{(|(8#2)\30)@2/+3':0,x,0}\n=!2*n:32    /rule30
+f@1>n#+/*/2#,12((|3*-0.5 -0.7+(!n)%n:2#64)+{(-/x*x;2*/x)}@)/0 /mandelbrot set
 
 
+  #+end_src
 -   https://cs.nyu.edu/~shasha/papers/tutorial
   8) There is each left each right (which should be interpreted
 as performing an each left on successive elements of the right array):
@@ -223,6 +249,12 @@ r:(+|:)
 (-1>':|\)'r\m
 (!4) (|+:)/'mv
 #+end_src
+
+** Problems
+*** all equal
+We can solve "all equal" with =?=, but if we didn't have it
+
+ae:{1=&/(*x)=x}
 * BQN
 * Klong
 - https://t3x.org/klong/
