@@ -53,6 +53,7 @@ The shape of tutorials of K looks like... Super minimalistic.
 - https://github.com/kparc/kcc
 - https://cs.nyu.edu/~shasha/papers/tutorial
 - https://ngn.codeberg.page/txt/tacitjk.pdf
+- https://github.com/gitonthescene/ngnk-libs/
 
 
 
@@ -250,9 +251,23 @@ r:(+|:)
 (!4) (|+:)/'mv
 #+end_src
 
+- find substring
+{1<#x\y}
 ** Problems
 *** all equal
 We can solve "all equal" with =?=, but if we didn't have it
+
+- 7 day moving avg
+I'd do 7{+/x%#x}':!9. I feel it directly says "7-day moving average", whereas
+{+/x%#x}'7'!9 says "the average of each 7-day window", and (7+/':!9)%7 says "one
+seventh of the 7-day moving sum" and is errorprone because you have to make sure
+the two sevens are equal to each other.
+But (7+/':!9)%7 is prettier. Above I'm just talking about which version I'd keep
+in my program, for clarity.
+
+- "in"
+if anyone needs a fast "in" for ngn/k, sorting and binary-searching can be
+faster than a plain "find": in:{x@:<x;y=x@x'y} // y∊x
 
 ae:{1=&/(*x)=x}
 * BQN
