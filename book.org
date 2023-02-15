@@ -34,6 +34,8 @@ John Earnest taling about k versions: https://www.arraycast.com/episodes/episode
 ** Tutotrials
 The shape of tutorials of K looks like... Super minimalistic.
 - https://kparc.com/
+- http://vrabi.web.elte.hu/k/kbyeg.k
+- https://github.com/kevinlawler/kona/wiki/Idioms
 - https://xpqz.github.io/kbook/Introduction.html
 - https://github.com/razetime/ngn-k-tutorial/
 - https://github.com/JohnEarnest/ok/blob/gh-pages/docs/Manual.md
@@ -226,6 +228,12 @@ Finally, each can apply to just one argument
 /3 5!\:x /
 
 1 2 +\:x
+
+Explore with:
+/{x^``fizz`buzz`fizzbuzz@2/0=3 5{x!y}\:x}'!20
+/{x^'``fizz`buzz`fizzbuzz@2/0=3 5{x!y}\:x}!20
+/{x,'``fizz`buzz`fizzbuzz@2/0=3 5{x!y}\:x}!20
+
 
 
 +\x      / assume 0 in as the initial base
