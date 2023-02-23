@@ -31,7 +31,7 @@ Good complete books:
 The main implementation is private, but there are some opensource ones. ngn/k, kona and [[https://github.com/JohnEarnest/ok/][oK]] are the most complete
 Very minimalistic. I read somewhere it's like a superpowered calculator.  It has around 20 builtins.
 John Earnest taling about k versions: https://www.arraycast.com/episodes/episode41-john-earnest
-** Tutotrials
+** Tutorials
 The shape of tutorials of K looks like... Super minimalistic.
 - https://kparc.com/
 - http://vrabi.web.elte.hu/k/kbyeg.k
@@ -56,7 +56,7 @@ The shape of tutorials of K looks like... Super minimalistic.
 - https://cs.nyu.edu/~shasha/papers/tutorial
 - https://ngn.codeberg.page/txt/tacitjk.pdf
 - https://github.com/gitonthescene/ngnk-libs/
-
+- https://codegolf.stackexchange.com/questions/50657/tips-for-golfing-in-k
 
 
 ** AoC
