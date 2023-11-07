@@ -65,10 +65,10 @@ The shape of tutorials of K looks like... Super minimalistic.
 - https://github.com/gitonthescene/ngnk-libs/
 - https://codegolf.stackexchange.com/questions/50657/tips-for-golfing-in-k
 - https://secwang.github.io/ngnkcart/
-
 - https://vector.org.uk/conquering-recursion/
 - https://vector.org.uk/a-graphical-sandbox-for-k-2/
 - https://clojureverse.org/t/data-modelling-with-vectors/9826
+- https://beyondloom.com/tools/specialk.html
 
 - https://docs.google.com/document/u/1/d/1W83ME5JecI2hd5hAUqQ1BVF32wtCel8zxb7WPq-D4f8/mobilebasic b analysis
 
@@ -314,6 +314,8 @@ ff:(,/(<;>)@\:)
    - http://archive.vector.org.uk/art10500340
    - https://github.com/tlack/atree
    - https://github.com/chrispsn/ngn-k-unparser
+*** tired: not enough sleep->wired too much coffee
+    https://ngn.codeberg.page/k/#eJwljs1qwzAQhO/7FMuSIsmyK8tJfNj0UQxucZUfiKVSK5GKcZ+9gl4+ZhiGmRQ9d72xuqEPasDHxOv7tCtG27Hrh6yt7g6V/M1vShbZV8q0G8DCFG/f7pPRh4jOh8flisvduS8Cx5T+sxgCzo/pilM4n50jgPTkFL0QsjaENAjiQiXkcnKqrM+8ju3rUWdtWLZoscP9y15VA/80eTPpCaVlxCprWWVVE5Oq7Zg3UY6LghngDxN7OTg=
 * BQN
   - https://miguelraz.github.io/blog/fromjuliatobqn/index.html
 * Klong
