@@ -1,0 +1,1 @@
+ls *k|entr -cssr 'k 01.k'
