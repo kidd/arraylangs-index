@@ -24,6 +24,39 @@
 Good complete books:
 - https://xpqz.github.io/learnapl/intro.html
 - https://www.dyalog.com/mastering-dyalog-apl.htm
+** papers
+- https://dl.acm.org/doi/pdf/10.1145/800136.804488 A PROGRAMMING TECHNIQUE FOR NON-RECTANGULAR DATA
+- https://dl.acm.org/doi/pdf/10.1145/390007.805361 APL THINKING FINDING ARRAY-ORIENTED SOLUTIONS
+- https://dl.acm.org/doi/pdf/10.1145/800142.805327 A VISION OF PROBABILITY AND STATISTICS USING APL by linda alvord
+- https://dl.acm.org/doi/pdf/10.1145/22415.22039 APL: A PROTOTYPING LANGUAGE
+
+** https://news.ycombinator.com/item?id=15912241
+I would compare Q (and other APL-related languages) to Vim
+editor. There you have some carefully chosen operations which are easy
+to perform. They don't take much efforts. They are also easy to
+compose in useful ways - because the corresponding properties support
+that. Since the basis of editing operations is fairly large, you have
+many operations; but when you know many of them, you can work powerful
+edits.
+
+
+Lisp on the other hand is more like Emacs - naturally. Here we have a
+small, carefully chosen orthogonal basis of abstract operations - not
+domain-specific, but "theoretically-foundational" small basis. Then
+you have a library of macros on top of that, and ability, of course,
+to extend.
+
+In other words, basis for APL is "classical" math, made executable and
+expanded with mechanisms required to put in one line programming
+constructs (logic, control flow, ordering...). It's harder to expand,
+but you don't often need that. Lisp is a specific branch of math,
+lambda calculus, which is provably enough to solve arbitrary
+programming problem. The "inner core" of Lisp is also hard to expand,
+but what you expand for your task is "the usage" of the language,
+which is made to be straightforwardly expandable.
+
+To me it's hard to say what is better.
+
 * J
 - https://zserge.com/posts/j/
 - https://medium.com/@solarbreeze69/chatgpt-explains-arthur-whitneys-j-incunabulum-5be2ea69a298 chatgpt
@@ -34,7 +67,55 @@ Good complete books:
 * K
 The main implementation is private, but there are some opensource ones. ngn/k, kona and [[https://github.com/JohnEarnest/ok/][oK]] are the most complete
 Very minimalistic. I read somewhere it's like a superpowered calculator.  It has around 20 builtins.
-John Earnest taling about k versions: https://www.arraycast.com/episodes/episode41-john-earnest
+John Earnest talking about k versions: https://www.arraycast.com/episodes/episode41-john-earnest
+** implementations
+- https://ktye.github.io/
+- ok
+- https://web.archive.org/web/20200330134132/https://kparc.io/kc/ (k7)
+- ngnk
+- kona
+** HN
+- geocar
+- https://news.ycombinator.com/item?id=8476113
+- https://news.ycombinator.com/item?id=15907840
+- https://news.ycombinator.com/item?id=15909001
+- https://news.ycombinator.com/item?id=8475809
+- https://news.ycombinator.com/item?id=8484916: K has interesting
+  sequential goodies as well: over ("fold" in Lisp/Haskell, "reduce"
+  in python), and scan (same, with all intermediate results returned
+  as well). But it also has the unary ("monadic" in APL terminology)
+  counterparts to these essentially binary operators, which I don't
+  remember from Lisp or Haskell (but I'm neither a Lisper or a
+  Haskellite, they probably are there somewhere..)
+Unary over is the "fixed point"/"converge" adverb, which does
+
+    x <- f(x) until x stabilizes (to within floating point tolerance
+if it is a float), returns to its first value, or goes through a
+requested number of iterations.  The best example of this that I can
+think off is the K "flatten" idiom:
+
+   ,// read: "concat over, converge". That is, given a general list,
+it concatenates all its items promoting atoms to one-element lists -
+thus, flattening one level of the list; And then applies it again and
+again until there is no further change, thus flattening successive
+levels of the list.  Is this the most efficient way to do this? No! in
+fact, for an unbalanced one sided list it will do O(n^2) where n is
+the number of items, with a best (and idiomatic Lisp/Haskell) solution
+being O(n), although it's usually 100 chars rather than 3.
+
+But the actual code orchestrated by these 3 chars behind the scenes is
+all tight C loops, so for small n it will beat complex solutions. And
+it is all of 3 self-describing, easily remembered, easily recognized,
+easily optimized (if Arthur ever cared ...) characters. If you care
+about worst case, you can easily code the standard Lisp/Haskell
+solution just as you would in those languages. See [0] for more.
+
+The underlying computational model fits sequential, parallel, SIMD,
+and almost every other paradigm much better than all the popular
+programming languages. Unfortunately, there's a learning curve that
+puts of most people (and is perhaps insurmountable to some people who
+have no problem with Python, Java, C or PHP) - it's much more
+Math-oriented.
 ** related langs
 - https://codeberg.org/anaseto/goal
 - https://ktye.github.io/kweb/compile.html
@@ -74,9 +155,134 @@ The shape of tutorials of K looks like... Super minimalistic.
 
 - shift-reduce parser:
   https://ato.pxeger.com/run?1=fZRPk5owGMYvPfEp3mJnSTSrYi-doOtedo86E5kdd61aimCZanAQKax_vkgve9kv1U_TF6hbUdocQnie3_skhEl-vn6fyrl8eXndhO71p1_vPJMTVQyKTQyE6EELfAmbtSfn4EnpBLBw3BACb_4tBHezWKgKAKhClNXqMPPWoSft8EiJ0hkY-MEbIcpypP83okAcI6z1iS8uA2x_I3HBXrAOYWFht94sYelJWFoxWNEcIiuAmRPB0pmdJomLmXYFW5zbV0VbnNkdaMMNHDpwaMMhG7Q7cNM5KxLFohpcnwOiAFShcQGIU2ByaYuT3enCoQQQJ__RCp0yQrzN4MRhYNlhKSRy6CN4Lnx1wh-OI3PuvqSl0xm5Pbhswx40gfyvugX0X9WPT1itUkXp8S3RpxAbiRGPWHPMnuleGRzFXEqMVBQoxgbKiUFYkhk7WXmmjEgejZAZ0ymk4H0GplIyTulUe8q0fPzIt1-cILhV0_Oj7pXh8T07SigoJt_qU41cxR0VVEyNOT5ZvNdMpc_RMY0HTupVTrU-CuRan6LYp4zdccYQxYA61zRzZDTHiif59jBJujEG27gME-o7f6XFo_cttGkd0PBXaFT6dEJiPNsN3qddHfGIbz-MSCWhbckfwF_dVmMjX2pkLRxpO6ohx3tQ8BOYphG15uqqobq1rNdruL9DTpg2ZJ_5HcWOMHwwQhW7oQ3zG-fPxXO8gH4D
+
+- boolean reductions
+  http://archive.vector.org.uk/art10501140
+** oK vs ngn
+
+from oK to ngn/k: the differences
+ float parsing
+  * a digit must be present immediately before the "." (".1" throws 'typ)
+ symbol parsing
+  * symbols defined using inline notation (`abc) must be alphanumeric (no "."'s)
+  * use `"..." to escape (vs. `$"...")
+ strand notation
+  * numeric literals must be separated with exactly one space (vs. any amount)
+  * symbols must be directly adjacent
+ boolean notation
+  * not present ("10010b" throws 'val)
+ dictionary notation
+  * not present ([a:34;b:"feed me"] is instead a block of expressions
+ o (function self reference)
+  * cannot be used infix ("{$[x;(x-1)o(y,2**|y);y]}[3;2]" throws 'typ)
+verbs:
+ +x (flip)
+  x must "conform"; each item of x must be the same length, or be an atom
+
+ x+y (add)
+ x-y (subtract)
+ x*y (multiply)
+  integer null (0N) is equivalent to -9223372036854775808 (integer nulls/infinities are not "sticky")
+
+ *x (first)
+  *emptyList returns "" for (), and appropriate nulls for other empty lists (0N, 0n, " ", etc.)
+
+ x!y (dict)
+  x can (also) be any non-integer atom, b (also) any atom (both do not have to be conforming lists)
+
+ &x (where)
+  x can be a nested list, functioning as "deep-where"
+  &() returns ,!0 instead of ()
+
+ <x (ascend)
+  <i is "open [file-descriptor]"
+
+ >x (descend)
+  >i is "close [file-descriptor]" (note: >1 will exit the repl)
+
+ ^x (null)
+  " " is also considered null
+
+ x^y (fill)
+  x must be an atom; nulls in y are replaced with x (replaces overload equivalent to (!x)^y)
+
+ i#y (take)
+  0N#x is a no-op, returning x unchanged
+
+ f#y (replicate)
+ f_y (weed out)
+  f is applied to the whole of y, not to each individual item of y
+  f#dict and f_dict only returns values (not keys!values)
+
+ _sym (lowercase)
+  returns a lower-cased version of the symbol (_`ABC => `abc)
+
+ $x (string)
+  strings are converted into a list of strings, each consisting of a single character (versus remaining unchanged)
+
+ x$y (cast)
+  uses `d instead of `f, no support for `b
+
+ `I$y (int)
+  parses string as an integer
+
+ x?y (find)
+  rank-sensitive find ("abc";"def")?"def" returns 1, not 0N 0N 0N
+
+ i?c (random alphabet)
+  i?"A" returns i random uppercase letters from A-Z
+  any other character returns i random lowercase letters from a-z
+
+ @x (type)
+  uses symbol types; uppercase for lists and lowercase for atoms (vs. positive/negative integers, respectively)
+
+ x@y (apply)
+  indexing out of bounds returns "prototype" of x, not just 0N (either a null of the appopriate type, or a list containing a number of nulls equal to the length of the first item in y)
+
+ .x (value)
+  can be applied to (simple/flat) parse trees, e.g. `3~.(#:;"abc")`
+  can't be applied to get bound environment of a function
+
+ ?[x;y;z] (splice)
+  insert with ?[;loneIndex;], not ?[;(index;index);]
+  splice uses ?[orig; (startIndex; length); value], not ?[orig; (startIndex; endIndex); value]
+  splice cannot take a monadic function instead of a value
+verb-y adverbs:
+ C\C (split)
+ C/C (join)
+  left arg can be string (not just character)
+
+ i\I (encode)
+  left arg can be atom; automatically expanded to cover all of right arg
+
+ i'x (window)
+  uses i'x instead of i':x; negative i's handled differently
+
+ i f':x (stencil)
+  MISSING - applies monadic f to overlapping windows of x of length i
+
+
+misc:
+ no keyword builtins, i.e. sin, cos, exp, log, prm, in
+  has destructuring (a;b):("abc";2)
+  has : (right), e.g. "d" ~ :/"abcd"
 ** AoC
+- /
+2,2,2
+1,2,2
+3,2,2
+2,1,2
+\
+
+data:{x:0:`argv 1; 1_(x?,"\\")#x}[]
+- https://codeberg.org/CptJimKirk/aok
 - https://github.com/qbists/studyq/tree/main/aoc/2022
 - https://k.miraheze.org/wiki/Advent_of_Code
+** aoc23
+- https://github.com/chrispsn/aoc2023/blob/main/answers.k
+- https://github.com/rak1507/aoc-2023/tree/main
+- https://copy.sh/k/aoc23/
+-
 
 ** day 9
 https://ngn.codeberg.page/k/#eJyVkU1PwzAMQO/+FaYg2iwrTjo+RBCiBy6TOCFxmidaJCoqTRStlegE7LdjSqUlu+2SOI6fHL8Q9k5zbKZxoqeUOr7NVM4uun98eojuJnFSzE+y51gdGxfVZK4jIKzcV6/byXazbV1qv+3pJnX9DyNVzWrVfEKimRY3R9YscxVbNJghvTTdG36U664FKMCiRrmXSC+sGUolGnaUdDLGyotz9V9PO4B8gnyEQoZ3DPsM+wwHjJwHSl5v5f0zPMcLvMSrpUISGOvudV12dfPeYlOhZqBh6gMJOqQHneHAHNYFihL2aiW9jyOAwJKf/S1iAGAcZ9QWuOZANoe2mWGca/ylQDkFzsmX/gtazJAc
