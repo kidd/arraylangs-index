@@ -158,6 +158,9 @@ The shape of tutorials of K looks like... Super minimalistic.
 
 - boolean reductions
   http://archive.vector.org.uk/art10501140
+
+- coin change
+  https://ngn.codeberg.page/k/#eJw9TdEKgzAMfM9XRAuzlYhNqwyU7UdEdC+ywZgvG1ScfvtqlYVwXC6X3FDNVSNX4dSXr1Mt10kJijTgVmPDnaunlmTqFCVj44csdW27AAwNM57RoqmNbqEfX7tk7TEPA+RyzXj/pwNyQID4Pj5vMYDUdIoxvjjVuSqI+H58/AJkVChCS3gckiEtDsIb8WEllmjYd0iEwlAig10B5Dn0zAz/yA1YGM/m4FmSiDddC4PeFhU/CnM2fg==sd
 ** oK vs ngn
 
 from oK to ngn/k: the differences
