@@ -1,1 +1,1 @@
-ls *k|entr -cssr 'k 01.k'
+ls *k|entr -cssr "~/programmingStuff/k/k $1"

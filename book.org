@@ -20,15 +20,18 @@
 * Generic
 - https://gist.github.com/suhr/77f8d0acae5a2399cab950841cc99a05
 - https://github.com/k-qy/notation
+- https://okmij.org/ftp/Algorithms/grasping-all-apples-at-once.html
 * APL
 Good complete books:
 - https://xpqz.github.io/learnapl/intro.html
 - https://www.dyalog.com/mastering-dyalog-apl.htm
+- https://aplmooc.fi/
 ** papers
 - https://dl.acm.org/doi/pdf/10.1145/800136.804488 A PROGRAMMING TECHNIQUE FOR NON-RECTANGULAR DATA
 - https://dl.acm.org/doi/pdf/10.1145/390007.805361 APL THINKING FINDING ARRAY-ORIENTED SOLUTIONS
 - https://dl.acm.org/doi/pdf/10.1145/800142.805327 A VISION OF PROBABILITY AND STATISTICS USING APL by linda alvord
 - https://dl.acm.org/doi/pdf/10.1145/22415.22039 APL: A PROTOTYPING LANGUAGE
+- https://dl.acm.org/doi/10.1145/586058.586060 APL Trees Alpert
 
 ** https://news.ycombinator.com/item?id=15912241
 I would compare Q (and other APL-related languages) to Vim
@@ -74,6 +77,11 @@ John Earnest talking about k versions: https://www.arraycast.com/episodes/episod
 - https://web.archive.org/web/20200330134132/https://kparc.io/kc/ (k7)
 - ngnk
 - kona
+- ktye/i https://ktye.github.io/kdoc.htm#Grp
+- ktye/halfkey https://ktye.github.io/halfkey/index.html
+- ksimple
+- kfun
+
 ** HN
 - geocar
 - https://news.ycombinator.com/item?id=8476113
@@ -161,6 +169,8 @@ The shape of tutorials of K looks like... Super minimalistic.
 
 - coin change
   https://ngn.codeberg.page/k/#eJw9TdEKgzAMfM9XRAuzlYhNqwyU7UdEdC+ywZgvG1ScfvtqlYVwXC6X3FDNVSNX4dSXr1Mt10kJijTgVmPDnaunlmTqFCVj44csdW27AAwNM57RoqmNbqEfX7tk7TEPA+RyzXj/pwNyQID4Pj5vMYDUdIoxvjjVuSqI+H58/AJkVChCS3gckiEtDsIb8WEllmjYd0iEwlAig10B5Dn0zAz/yA1YGM/m4FmSiDddC4PeFhU/CnM2fg==sd
+
+    https://ngn.codeberg.page/k/#eJw9TdEKgzAMfM9XRAuzlYhNqwyU7UdEdC+ywZgvG1ScfvtqlYVwXC6X3FDNVSNX4dSXr1Mt10kJijTgVmPDnaunlmTqFCVj44csdW27AAwNM57RoqmNbqEfX7tk7TEPA+RyzXj/pwNyQID4Pj5vMYDUdIoxvjjVuSqI+H58/AJkVChCS3gckiEtDsIb8WEllmjYd0iEwlAig10B5Dn0zAz/yA1YGM/m4FmSiDddC4PeFhU/CnM2fg==
 ** oK vs ngn
 
 from oK to ngn/k: the differences
@@ -523,6 +533,32 @@ ff:(,/(<;>)@\:)
    - http://archive.vector.org.uk/art10500340
    - https://github.com/tlack/atree
    - https://github.com/chrispsn/ngn-k-unparser
+   - https://github.com/kparc/parserclub
+   - https://nsl.com/papers/kparse.txt
+   - https://h14s.p5r.org/2014/10/shiftreduce-expression-parsing-by-douglas-gregor.html
+   - https://github.com/erikeidt/erikeidt.github.io/blob/master/The-Double-E-Method.md
+   - https://github.com/gitonthescene/ngnk-libs/tree/master/trees
+   - https://dzaima.github.io/paste/#0nVZLc6Q2EL77V8hTmxHKsNiTWyB4KoekklRq95BbWKpWwwgPsQxjIca1wfz3dEsCNNi@5MKj1f31Q/21JIUmZ6H2JCWrzcfvw@9WyZUEGT@cUXTz5QsdJY/8BKKe3tCYlvJAQ7Kiq5iK4kgHpyJBoSDpHSnuUsrpel38lNJ/KXl5MZKfneRvavXr7tE3uHXLP7pl3Zym5aiVVSGCj1uW3ebOukJ3/UNM4QtDuCq7utBVU5MTV60IWq0Y6a8IQe0qvU3cJ6LiYthqrjRDfNSyi63WLaxneeKLFpLjQdmfSaLnRVEfQJ3@8vlXaoXPx0oKEmjVCeY8WU1IDcBVVm02DpyQqiTBdcHIXgn@kHjKrXgC9dJEawQqLRKLHRiQfL0u3RdjRG3SCZoooTtVE5WQwfdTpClNKMRkso5OXXsEAM0S/E8hYTI4bSFbYU3MPpH1mtidYiQIdAo7ZQzZeq2jFlBr2Wq60zEILaxOzUZB07SxXQ3JOc7ygYWaRWfnWzwF0BOMJUu3XAYFJDXBeWBnrgwWGnPJhtfG2N9RVReyO4j2Nc7Z4cjKBlW8AQF0uETo7UYBEPQj00fVPBOagBpN3kQ/KPxobEGgWmz09LrENOsDuvDmdAjR6cm0bjHFOG9lRn1NK3cBXsjJm3U8qXtbxznCJtYD8wwHG@QllvUCRLpOaQ8R2FoYyYZmOU1eaQN7RjXaZ3mWR1E0LPRAZyS3DQ8EJjw9@IrD1SK2ueGmAg1eaaHflqVFviKTLOHe6HioLIG8iqbWVd2Ji95wWXT1kdcHKQ6kOHJF6KawWhYMUXrYnZjmNKQBvBm8e3gP8MY5EZvnkJmq5dcphHRZSBBYxAVR5yHk5pZZh0kd8HmsuaHCsy00ghsFHLpiN9YXylvBPD/HKB1IjKN1TBNHH9Kbs@gBiQ0zmtv@eHnx1MxAxilJCy4lpFU8nmiebYD4Kaixab65YcgXXTmOQ4e9aG7j@mzGDhri@yImZsKcu6UOSRkXZsI4wFDnXuPYvXvPxFMdu8FVzU35wS/81QUJIJyATlU2uyFFfa@PabrFsFECGVxjUXbjH1R83gkzGw0NWxfG1Iqjh3724NnxR7QDnuwyeIRAKsTIfSQvLBRgdk5kp4ppQ0hu8M7S8lEDmaZzFJss4Ii@Nyfn1@BDzwfyod9HpeQ6YNE/TVUHSJmBfXVG5Ra7aO5ITAYSMZ0xRkA//f6nGwLtc6WLI6hE7dwjB1HyTurY8eKPvz5/ggRVVd9X5TeP7gWHamE/x3PC5RawzgsVLFg81ySwFSSgaAhUbtnCAGe4b4A3ogzU89A6aJYGuJWXHsy5974Hw514NnDtatBLZi3LSmqhYCzdFaaL2HtYQMAL5ygI/x@WORunuMBysQxH8Ozq1XJt6zAvz5TY4S8wYEMpkMCv0CICHP8X2djj6v1S4rpv4Fog9G2byRbO4ZsbDx26n4ajia84z/VhvE7iRVmPCslMqTPM2x1gwcUEiMnis7m5ArXM5Q2M7C111Wc82eck@GETMsLJhmxuKNlnMAS3ScCTW7Jl@bACZDiB2kaKSDb3gRJPXaVEQDsNl18GZ1p7EoUOVEj69tg8/1YdDqKOSclheIRAnpM@wlzvpAzhJJONaoFIcCEd2AIY6a5A@B8#JS
+   - https://github.com/hoosierEE/element/blob/main/src/misc/Parser.py
+   - ATW  parser for shakti
+   - https://codeberg.org/effbiae/earley/src/branch/main earley
+   - https://ato.pxeger.com/run?1=1Ve7cuPIFQ1d5lc0SYvoBggBoOblBjWCHxtaDhyCkAwBIIkVSKCApgRIHJVrYwcOtsqBHUyymaucOPSXbOgv8Cf4dDc14sxIOyqvE7NYING4ffo-z734y3eX5-vF-v33P_3zLCWizrKe45AqrrO1IFdZIsqazOtyRdKsEsvdSq_itzUPQt_f-tEspH2XBSPP2jqt3_r9YRv5FFd2ZtSB0dreu94eZrLMixT_SFGWl5uK0KxNik2aNaTJirmtpfL1gvUSnHJmhP5JGwXHrQQhX5f5mohlRq7iYoMt5Zy0BEs35DqHdt1hL2nX0M3qzHp6S7vtDRvdTNt3oblto1ltQsPjGa_5jUJLirhp8nmnEEVXaUClIFmXUAkyLvRcZ-p2TDxSZHOxKhuxW5iQOl8s91eOyCpP00Lv6CVFw289i9rtsXSI5VlBOBq2PlY84p3PODMOkyqEwyzfI5NIqdVUdRanpNwIpZjWBIv8tguAxM7HDtzbsfGMt0Pl3WZZcds7HxomnylfX2W1yJO4UAEl8Gia1fApBF1-O3YMOiADf_Cvb_-mrn9Q17-q67fq-s2AweECwoJTzzprT6T6ptV4nPZloDsGP3Y9IixOj3BvbN23Bt_Otirwxw6X0t55443Hbo_gWILAhB554b_0RSShJbYb3vhkZnvW0KA3AZsZ_eGN30U6X5Zlnd-Ua_GYFd4jVnyzZ8WfPrJO2eJJW-BFODuwHOqe-oKZd3x2bHDBRTDj_a0zNATfGrSTqigXn8FEAjdI5Y-g_CvfPUNMwy4KRIRHFKoQ98wSrm8JpiIxeVK1Pz6i2sPTf6jrP5WyMjdRBVlN4vTrDXJrzxdV2eQiL9e9RCAjfhae0X7LTuBHqar6eHcJH7YBloKw82987uOXlzDcwT0eRL4pr9H9hnsxaiesbzmfSSvhaF-tIr7IigYqFAjj9C2lw4QN-xOwQMLHjkUptQ2eM5u6Y-RlG-SMyZQ_txyP2lt3vPXO2QzPJv1z2z18aUkJHJPzkTdq4UcA81uy4vRu5JyhSIwWuqZcOhYrjoG1oVqjaWBILYyVOYQUk3EcmtKFVZzy2woV4nDEYox4V2OHGx2qxqiULau4viTXy6zWNYa6K3LREFF-4KjevL7kt2HuC7_2O7-KUGihiIZB6J7VoU6EyIfnokOPvrZcEIR7SiaBPbGOHgSQTZ6VByddIM8Vk_86EenSTxkf3Z0J3FRwjnTD2JF3S450CJMq6BC2ZTCt_FEHyulkjHNOh6ZgjtyOJwxLkrzHjntqCdP1c2mATuZJYD2kOozfMx0UtbO-DiUw01Wq28I8r5Gl4K2y1jUqiTRfp3kC6krnJZJk7Nx247Fzn7Cd33d9mWVGK330LlQ0GBkjxZQa-1fLeL3ISFwUigiBl7WggTkitgawJP6WDDaSFgakyurVRsSyNMi069VZWkrCbINpp9EkdX_U0XSrOUQBoA1sVgBM580HI3rFHP0ngK3tLsK3SGBqtmzcvjNmmrY1suoBj0M_ilx_howaGaNFfRFX2iAVfgoXVZOATum2n6D70i0c3Zdk8IQH1AFP4xVzMAxVUO0-jo62QlOVckg-fB7FcYhpKLN68yLhfXCAZ7HZCd8D06Z-gvYEGDW37B6vTqDhScv6FE6VFcUczzrRFNrkq6qQaQPGmsdJJiu7QnIK3UOuwTAz2vod45SD_KYLFrDAUCuowumCI3EVq1JR-8UF46CUsEojMcGVyyJtIzz-vasoDzIgIuQbJHuqE1xf4YSnD1jw6f0BgEAv7PzhruRlfY0NWIGR7PC7jZjbb77_yb8FuIiO7sATselZ01n8Fr1Z3rERHdiD45aNtrIJx3zgDt5iTtBuuJB1iIps0EXXC7HUQ04ssnJRd8hU-J_QX_7217_5xe8YxPFx0UMIZhsMM-QFIS8JeUXIa0Le6MenhFiE2ISYhBzg1iKnNjk1yemBDtvU1tEU5SUoFMdyKllRgWpE3H74EkcCEp1OeotC2Zf55IstlpLZPkfUVjJXzxE1nyN0oIVePS0nTbK01MsflrK11Osfltqp9eZJKSalDmSw19m1iu0CAwMqJ57Lbp2UKySBosYfGeAesFU0H7Z8Hs1nxe9Zkftfx8x9Vsy-IGU_S8r8ktRDzDCCoL3VqsepKgA96wpSY8lFhvghlvKxIsgfG8Oi1jF0yd73_yaG3rNi-AUp-1lS5pek7mP4FR_YR7bnWvZkYh69OnhhvTz6-aAnGi4uw6-iXsLpyJGkzAwMmB99HFJiconRkhvSw_ybQDgIEzWUedbAss2DwYmJbUEeQXiRifv67iSPZ3Gy3LHmNa8w-36KvzskX-OlAW8P12V9qZoBcOJ1-vGLfu9igQ5T-dd-wricrklRc92sze2Ibp2GHTccQ5AFUmcGTwCszlZD80W2I5oslVtzjjw7JElQ1I9oJHW6XuZQXr5dX-cY8bD_IcWJHHCDELpAByKdIf8Ed3DCA8A8bz8xAMvafUoWu-ArrUP0sG1TpfDgB1fcu1Nupsp0dcXLuTz5U6XrbFVe7bTUQ9SeSxuFoR34rnfvSSpfcEXDLhbObkkCyba8674bjCRqxMWbSN4oj9RlKXTj_7t8-T2U00QoGszhevX9e_37Hw
+   - https://gist.github.com/hiredman/a3415450d78fa234a5dcc56fa0228e36 clojure shift-reduce parser
+/tokenize k 6class 8state
+C:";*aq/:"
+
+A:-127#C?"*q*****;;****a*aaaaaaaaaa:;*****aaaaaaaaaaaaaaaaaaaaaaaaaa;/;**aaaaaaaaaaaaaaaaaaaaaaaaaaa;*;*"
+
+M:(C,"br")?m:1_'(";;*aq**";"*;*aq*:";"a;*bq**";"qrrr:/r";"/rrrrrr";":;*aq**";"b;*bq**";"rrrr:/r")
+
+t:&5>M\A@
+   - https://dzaima.github.io/paste/#0bVLRboIwFH3nK@7D4i2i4OZ8GFj2IcakpisLE9sKSJaw/vvaikwyX8i9J@ece05DksCZcnXSqinbUskgSUBTXasvwf1eXKQfQHzrmjRtHUIfAFSihVJqoLCL49jC@/h00ITTnPTHlOcUVzjjW4pv@I4SU@xwAV3KTRhmVj44FNIaYPkhZIvZgOladBa15rvV/p57ai1MQqA5sG771BfS5PDUO358NNth6kzOnIor2ahKxJX6dKmtV4QpYGRtyJihUDUQZ84vdQ2qcFfjpiq5IM/htShAWQC5HqHUVoHZzNP92uGNBbfgtv5QlhENYyo7eVVnQmYyLzEgqkaMev8YjJzBV/tThiybXnA@g4P/3ldl45nU@biyhvm6jjup4rJPpI9Oe6mPOaXyQ1U9ZJsg8H8KvkRrtPu4zBc/6@V/ZHMHrV830XJugV8#JS
+   - https://dzaima.github.io/paste/#0fZHBboMwDIbvPIV3aZKSRm23VSosoL1EL4hDlSYTEgsIWhRU8e5zgE2V2vVCiL/f/m2n1GcwtgUJ1wCAhCQC6njPQCbgwp774Oo22EspL/akTWH1KYWVgwjcahIunwhdts69dDlJ@RNp5rwyE0LQz6Y59qJox5M6lroIKeNwD3uW9lHW5yznwRCYi1XnorKgO9qeGzaOV@Kwha1xWF8cw7n4PtZUycTTiVukKpFkTWCxAPUhyZ7EI230@dJYuFoOXWTTUEW4uEzlg8cD89/Zw2ANJxMXz3fviL64gVlkqgaoJwoq45Foy0JpumFTo3PaAfNq0U32hQFaC@u7elHCsrHqtYvQSImO1gfu2DBJddlquE6tHKSJwchx1zIxBxSO/yyGWqoYBt988DcdOqRg0KhjML8QZvn7nIW7DVRl26rUoqy@KO6X7FeE0a2H92RLfPwO8A3f8lfO3/g735FHqbcKLL97XIZvwuV/BUb2m/qQIsx2OeIf#JS
+   - https://dzaima.github.io/paste/#0fZHfToMwFMbveYrjjW3HWeOmLsosxOcgXJjaGhIsBDZSsvDunpZpTDa9KeX8vvOdP23MAawbQMEpAWApy4B7nASoHHw6YQiufwcnpdTRvRtbO/NewNpDBn69CFf/CH15VwXpapHiP9LSB2UppeSvff82yXqIX@5F4TOiAuESTqKYsnKqRIXJnNij04e6dWBGPhx6EcdraNjadTRsMKdwJT/fOq5VHujCHVGdK3bH4PYW9Itiz2wfaW8Ox97BySGMmStSndHiSl3NAc8inOcaljy8yv3@/B8qUl3awFlk2x54IBpaG5AcmlobvhFLowC1Bd5JF3q40dKJ6HEaaWkdGatcy5F36IUg1SjmpUPTDAZKi10VRuScbkLlcc0qt7yLN0qhOCUh6NjPnPzMRhULsNESzu8TE6lYTN3TZhPduqFtjGzaD07bZc9rJvg2wEuyZSF@AXCDW7xHfMBH3LFrqb8VZL@7boObdPWXQWTfqVcpwXJXXcUpsUd8IvYF#JS
+** trees
+   - https://www.jsoftware.com/pipermail/general/2007-April/029545.html
+   - https://www.jsoftware.com/pipermail/programming/2012-September/029422.html
+   - https://github.com/JohnEarnest/ok/blob/gh-pages/docs/Trees.md
 *** tired: not enough sleep->wired too much coffee
     https://ngn.codeberg.page/k/#eJwljs1qwzAQhO/7FMuSIsmyK8tJfNj0UQxucZUfiKVSK5GKcZ+9gl4+ZhiGmRQ9d72xuqEPasDHxOv7tCtG27Hrh6yt7g6V/M1vShbZV8q0G8DCFG/f7pPRh4jOh8flisvduS8Cx5T+sxgCzo/pilM4n50jgPTkFL0QsjaENAjiQiXkcnKqrM+8ju3rUWdtWLZoscP9y15VA/80eTPpCaVlxCprWWVVE5Oq7Zg3UY6LghngDxN7OTg=
 * BQN
@@ -530,3 +566,27 @@ ff:(,/(<;>)@\:)
 * Klong
 - https://t3x.org/klong/
 - https://github.com/briangu/klongpy
+
+* combinations of 3
+  y:10?!100
+  y@&'{3=+/'x}#+!(#y)#2
+
+  f:{:[(~#x)|1>y;(~y)#,!0
+     o[1_x;y],(*x),'o[x;y-*x]]}
+
+  https://ato.pxeger.com/run?1=m700Oz4vPW_BgqWlJWm6Fjfjkq2qVaIr7SqsNTSt6yqtddQqrHX0NQx09K3yoyt0Da0rY60NERxdw1jN2FourjwrE65sKyMuQ20HfUMbq5ga9WoN7Zi6Ck0HtYpa9eToPO1soPLsWIgtUMtglgIA
+
+
+* 2048 in k
+  - https://ngn.codeberg.page/k/#eJyFj9FSwjAQRd/zFbHtQNIWkxSedkfb/6gVB6qSMUhHKqS08O0u4pM6w1PO3L1396axyzfoi9Jjl49OHgGz2CRdnlVH1vw707fmPu9ozLauhj4qHy3Eo9Pg0aNO/VyEXk5MYsmx3DjohUMrwWNU2rvQkemkXKE5OVAUpZtbtJigK2yVarSJkXhO0EsL1jvoh5jWKDHQNUUX5JFt2wb6c7kyVWJ2MzlIkQwg1Xo3PlzIhx0ayis+5RNeb/bvhJrww76uWmJD/NkQZATu+aVlNcz4jP602kP/pEGkQSDTgAdqHKnBCJMMKhynSj5EdeiPZx9fwHcJEatahhqz6kelfmWNC5xeFf5Ergvmt6ArxtgXPVWE3g==
+
+* fisher yates is a nice mindfuck for k
+look at discord for it
+https://www.robweir.com/blog/2010/02/microsoft-random-browser-ballot.html
+and why (sort (random) a) is bad but (sort-by (random) a) is ok-ish. You can use swartzian transform for that
+https://rosettacode.org/wiki/Knuth_shuffle#Clojure
+
+* kx docs
+https://www.habla.dev/blog/2024/07/02/PostPairsTrading.html
+https://www.defconq.tech/docs/concepts/memoryManagement
+https://learninghub.kx.com/courses/kdb-architecture/
